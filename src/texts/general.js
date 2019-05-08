@@ -1,6 +1,6 @@
 export const GENERAL = {
-  TITLE: 'El<span>Título</span>',
-  PAGE_TITLE: 'Title',
+  TITLE: 'Casa rural<span>Piedad</span>',
+  PAGE_TITLE: 'Casa rural Piedad',
   HOME: 'Inicio',
   GALLERY: 'Galería',
   CONTACT: 'Contacto',
