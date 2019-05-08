@@ -6,6 +6,7 @@ import { ROUTES } from './constants';
 import { APP_TOKEN } from './api/Constants';
 // Utils
 import PageLoader from './modules/common/PageLoader';
+import Navigation from './modules/common/navigation/Navigation';
 
 // Routes
 const AuthLayout = lazy(() => import('./modules/auth/layout/MainLayout'));
@@ -19,6 +20,7 @@ const NoMatchPage = lazy(() => import('./modules/not-found/NoMatchPage'));
 const Routes = () => {
   return (
     <Suspense fallback={<PageLoader />}>
+      <Navigation />
       <Switch>
         {/* <Route exact path="/" render={() => <Redirect to="/login" />} /> */}
         <Route

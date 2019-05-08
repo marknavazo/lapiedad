@@ -1,0 +1,74 @@
+@-webkit-keyframes lineV {
+    from {
+        margin-top: 50px;
+    }
+    to {
+        margin-top: 0px;
+    }
+}
+@keyframes lineV {
+    from {
+        margin-top: 50px;
+    }
+    to {
+        margin-top: 0px;
+    }
+}
+
+@-webkit-keyframes appearFromTop {
+    from {
+        @include translateY(-80px);
+    }
+    to {
+        @include translateY(0px);
+    }
+}
+
+@keyframes appearFromTop {
+    from {
+        @include translateY(-80px);
+    }
+    to {
+        @include translateY(0px);
+    }
+}
+
+@-webkit-keyframes appearFromLeft {
+    from {
+        opacity: 0;
+        @include translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        @include translateX(0px);
+    }
+}
+
+@keyframes appearFromLeft {
+    from {
+        opacity: 0;
+        @include translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        @include translateX(0px);
+    }
+}
+
+@-webkit-keyframes opacityTransition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityTransition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

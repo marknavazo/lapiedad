@@ -7,10 +7,15 @@
 @import "styles/modules/reset.scss";
 @import "styles/modules/base.scss";
 @import "styles/modules/menu.scss";
+@import "styles/modules/footer.scss";
+@import "styles/modules/mobilemenu.scss";
+@import "styles/modules/forms.scss";
+@import "styles/modules/keyframes.scss";
 @import "styles/modules/gallery.scss";
 @import "styles/modules/localization.scss";
 @import "styles/modules/contact.scss";
 @import "styles/modules/home.scss";
+@import "styles/modules/notfound.scss";
 
 // react-image-gallery
 @import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";

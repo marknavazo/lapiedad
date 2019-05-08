@@ -1,0 +1,354 @@
+label {
+    font-size: 1em;
+    color: $white;
+    margin-bottom: 5px;
+}
+
+::placeholder {
+    color: $lightGray!important;
+}
+  
+:-ms-input-placeholder {
+    color: $lightGray!important;
+}
+  
+::-ms-input-placeholder {
+    color: $lightGray!important;
+}
+
+input, select, textarea, button {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    color: $lightBlack;
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+input {
+    outline: none;
+    background: transparent!important;
+    border: 0px!important;    
+    border-bottom: 1px solid $white!important; 
+    border-radius: 0!important;
+    color: $white!important;
+    font-size: 1em!important;
+}
+
+textarea {
+    outline: none;
+    background: transparent!important;
+    border: 0px!important;    
+    border-bottom: 1px solid $white!important; 
+    border-radius: 0!important;
+    color: $white!important;
+    font-size: 1em!important;
+    height: 100px!important;
+    resize: none;
+}
+
+select {
+    outline: none;
+    background: $white;
+    border: 1px solid #ccc; 
+    -webkit-appearance: default;
+    appearance: default;
+    min-width: 122px;
+    max-width: 100%;
+    height: 38px;
+
+    &.size2x{
+        min-width: 244px;
+    }
+}
+
+input[type=radio] { margin: 0 .3rem 0 .6rem; }
+
+input:focus, select:focus, textarea:focus {
+    border: 0;
+}
+
+input:active, select:active, textarea:active {
+    border: 0;
+}
+
+input:hover, select:hover, textarea:hover {
+    border: 0;
+}
+
+.error-label,
+.success-label {
+    clear: both;
+    display: block;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    color: $white;
+    font-weight: 500;
+}
+
+.error-label { background: #455761; }
+
+.success-label { background: #00b3bd; }
+
+.form_wrap, .form_row {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.form_wrap {
+    padding: 0 10px;
+
+    .form_row {
+        margin-bottom: 15px; 
+        display: inline-block;
+
+        .form_item {
+            width: calc(100% - 25px);
+            float: right;
+
+            .form_label {
+                padding-bottom: 0;
+            
+                label {
+                    font-size: 1em;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: $lightBlack;
+                    margin-bottom: 2px;
+                }
+
+            }
+
+            .form_input {
+                input {
+                    width: 100%;
+                    padding: 5px 12px;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    font-style: normal;
+                    color: $lightBlack;
+                    background: transparent;
+                }
+
+                select {
+                    border-radius: 4px;
+                    font-weight: 300;
+                }
+            }
+
+            .readonly__input {
+                padding: 5px 12px;
+                font-size: 1rem;
+            }
+
+            .form_textarea {
+                textarea {
+                    width: 100%;
+                    padding: 9px 12px;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: $lightBlack;
+                }
+            }
+
+            .invalid_msg {
+                display: none;
+                font-size: 1.3rem;
+                color: $red;
+                line-height: normal;
+                padding: 1rem 0 0;
+            }
+
+            &.invalid.dirty {
+
+                .invalid_msg {
+                    display: block;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.form_buttons {
+    display: block;
+    width: 100%;
+
+    .btn {
+        float: right;
+        position: relative;
+        display: block;
+        font-size: 1em;
+        color: $white;
+        font-weight: 400;
+        text-align: center;
+        max-width: auto;
+        padding: 0 5rem;
+        height: 60px;
+        line-height: 60px;        
+        background: $green;
+        border: none;
+        margin: 0;
+        cursor: pointer;
+
+        @media only screen and (max-width: 1200px){
+            padding: 0 3rem;
+        }
+
+        @media only screen and (max-width: 992px){
+            padding: 0 2rem;
+        }
+
+        @media only screen and (max-width: 767px){
+            padding: 0 1rem;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+
+    }
+
+    .btn, .btn:hover {
+        @include transition(all .4s ease-in-out);
+    }
+
+    .secondary {
+        float: left;
+        background: #FDBE48;
+    }
+
+}
+
+.input_line {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    width: 1px;
+    height: 18px;
+    background: #979797;
+}
+
+.form_tooltip{
+    position: relative;
+    cursor: pointer;
+
+    .tooltipIcon {
+        position: absolute;
+        top: 5px;
+        left: -35px;
+        font-size: 1em;
+
+        i {
+            color: $inputsGray;
+        }
+       
+        .tooltipText{
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            width: 268px;
+            background: #278ABD;
+            color: $white;
+            display: none;
+            border-radius: 4px;
+            padding: 15px; 
+            transform: translateY(-50%);
+            font-size: 0.7em;
+            z-index: 5;
+            &:before{
+                width: 0; 
+                height: 0; 
+                border-left: 10px solid #278ABD;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent; 
+                position: absolute;
+                content: "";
+                right: -10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            h5{
+                margin-bottom: 10px;
+            }
+            p{
+                margin: 0;
+                line-height: 2rem;
+            }
+        }
+
+        &:hover {
+            .tooltipText{            
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .form_tooltip{
+        .tooltipIcon {
+            left: -22px;
+            font-size: 1em;
+           
+            .tooltipText{
+                width: 200px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .form_tooltip{
+
+        .tooltipIcon {
+           
+            .tooltipText{
+                right: initial;
+                left: 30px;
+                &:before{
+                    right: initial;
+                    left: -10px;
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.fa-exclamation-circle {
+    color: red;
+    margin-top: 2px;
+}
+
+.mandatory {
+    color: red;
+    font-size: .7em;
+    width: calc(100% - 24px);
+    float: right;
+    margin-top: 5px;
+}
+
+.success {
+    color: $black;
+    font-size: 1em;
+    float: left;
+    margin-top: 5px;
+}

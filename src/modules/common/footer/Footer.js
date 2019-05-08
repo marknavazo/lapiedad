@@ -1,38 +1,19 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { elastic as Menu } from 'react-burger-menu';
 import { ROUTES } from '../../../constants';
 
 // TEXTS
 import { GENERAL, MENU } from '../../../texts';
 
-class Navigation extends Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
-
+class Footer extends Component {
   render() {
     return (
-      <header>
-        <Menu right>
-          <NavLink className="menu-item" exact to={ROUTES.HOME} activeClassName="selected">
-            {MENU.HOME}
-          </NavLink>
-          <NavLink className="menu-item" exact to={ROUTES.GALLERY} activeClassName="selected">
-            {MENU.GALLERY}
-          </NavLink>
-          <NavLink className="menu-item" exact to={ROUTES.CONTACT} activeClassName="selected">
-            {MENU.CONTACT}
-          </NavLink>
-          <NavLink className="menu-item" exact to={ROUTES.LOCALIZATION} activeClassName="selected">
-            {MENU.LOCALIZATION}
-          </NavLink>
-        </Menu>
-        <div className="container">
+      <footer>
+        <div className="container text-center">
           <NavLink exact to={ROUTES.HOME}>
-            <h1 dangerouslySetInnerHTML={{ __html: GENERAL.TITLE }} />
+            <h3 dangerouslySetInnerHTML={{ __html: GENERAL.TITLE }} />
           </NavLink>
-          <nav id="top-menu">
+          <nav id="footer-menu">
             <ul>
               <li>
                 <NavLink exact to={ROUTES.HOME} activeClassName="selected">
@@ -57,9 +38,9 @@ class Navigation extends Component {
             </ul>
           </nav>
         </div>
-      </header>
+      </footer>
     );
   }
 }
 
-export default Navigation;
+export default Footer;

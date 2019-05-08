@@ -5,7 +5,7 @@
 $primary: #37b44e;
 
 body {
-  background-color: #f8f9fa;
+  background-color: rgb(94, 60, 60);
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #000;
@@ -15,5 +15,72 @@ a {
   text-decoration: none;
 }
 
-$black:     #000;
-$blue:      #ca7257;
+// SIZES
+
+$xs: 767px;
+$md: 992px;
+$lg: 1200px;
+
+// MARGINS
+
+.mt100 {margin-top: 100px;}
+.mt80 {margin-top: 80px;}
+.mt50 {margin-top: 50px;}
+
+// PADDINGS
+
+.pt100 {padding-top: 100px;}
+.pt80 {padding-top: 80px;}
+.pt50 {padding-top: 50px;}
+
+// COLORS
+$black:         #000;
+$brown:         #ca7257;
+$orange:        #ff6b09;
+$lightBlack:    #373A3C;
+$blue:          #002855;
+$darkblue:      #012B58;
+$gray:          #9b9b9b;
+$darkGray:      #515151;
+$green:         #9aae04;
+$inputsGray:    #999999;
+$lightGray:     #9b9b9b;
+$backgroundGray:#eeeeee;
+$menuGray:      #666E72;
+$red:           #fe2424;
+$white:         #ffffff;
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+.main-container {
+  min-height: calc(100vh - 111px);
+}
+
+h2 {
+  font-size: 1.8em;
+  color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+@mixin translateY($e) {
+  -webkit-transform: translateY($e);
+  -moz-transform: translateY($e);
+  transform: translateY($e);
+}
+
+@mixin translateX($e) {
+  -webkit-transform: translateX($e);
+  -moz-transform: translateX($e);
+  transform: translateX($e);
+}
+
+@mixin transition($e) {
+  -webkit-transition: $e;
+  -moz-transition: $e;
+  transition: $e;
+}

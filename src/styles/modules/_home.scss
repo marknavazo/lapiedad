@@ -1,0 +1,28 @@
+#home {
+  background-position: fixed;
+  background-size: cover;
+  background-image: url('assets/images/thumb-1920-435117.jpg');
+
+  .text__container {
+    background: rgba(255, 255, 255, .7);
+    padding: 30px;
+    display: inline-block;
+    max-width: 500px;
+    -webkit-animation: appearFromLeft 1s;
+    animation: appearFromLeft 1s;
+    @include transition(1s);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      color: $black;
+    }
+
+    p {
+      margin-top: 10px;
+      line-height: 20px; 
+    }
+  }
+}

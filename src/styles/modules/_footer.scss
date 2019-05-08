@@ -1,0 +1,58 @@
+footer {
+  position: relative;
+  background: $white;
+  min-height: 60px;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  margin: 25px -15px 0;
+
+  a {
+      color: $black;
+
+      &:hover {
+          color: $brown;
+      }
+
+      &.selected {
+          color: $brown;
+      }
+  }
+
+  h3 {
+      font-weight: bold;
+      display: inline-block;
+      padding: 15px 0;
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+
+      span {
+          font-weight: 800;
+          color: $orange;
+          text-transform: uppercase;
+      }
+  }
+
+  #footer-menu {
+      float: none;
+      margin: 0px auto;
+      padding: 0 0 15px 0;
+      font-size: 1em;
+      font-family: 'Poppins', sans-serif;
+      font-size: 700;
+
+      @media only screen and (max-width: $xs){
+          display: none;
+      }
+
+      ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+              display: inline-block;
+              margin: 0px 15px;
+          }
+      }
+  }
+}

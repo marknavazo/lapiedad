@@ -1,3 +1,33 @@
-#map {
-    width: 500px;
+#contact {
+    .form {
+        -webkit-animation: opacityTransition 1s;
+        animation: opacityTransition 1s;
+        @include transition(1s);
+
+        .captcha {
+            margin: 0px auto;
+            display: inline-block;
+        }
+    
+        .send__message__button  {
+            border: 1px solid $white;
+            background: transparent;
+            color: $white;
+            font-size: 1em;
+            padding: 15px;
+            margin: 0px auto 35px;
+    
+            &:hover {
+                color: $orange;
+                border: 1px solid $orange;
+            }
+    
+            &:disabled {
+                opacity: .6;
+                border: 1px solid $white;
+                background: transparent;
+                color: $white;
+            }
+        }
+    }
 }
