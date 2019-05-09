@@ -155,7 +155,7 @@ class ContactPage extends Component {
         <div className="container main-container pt90">
           <h2>{CONTACT.TITLE}</h2>
           <div className="row mt50">
-            <div className="col-md-8 offset-md-2">
+            <div className="col-md-6" id="form">
               <form className="form" name="form" onSubmit={this.handleSubmit}>
                 <div
                   className={`inputs form-group${submitted && !contact.name ? ' has-error' : ''}`}
@@ -279,6 +279,17 @@ class ContactPage extends Component {
                   </div>
                 )}
               </form>
+            </div>
+            <div className="col-md-6" id="contact-data">
+              <h3>Datos</h3>
+              <p>
+                <i className="fas fa-phone" /> +34666666666
+              </p>
+              <p>
+                <a href="mailto:mail@mail.com">
+                  <i className="far fa-envelope" /> mail@mail.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

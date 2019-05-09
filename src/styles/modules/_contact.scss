@@ -1,8 +1,10 @@
 #contact {
+    
     .form {
         -webkit-animation: opacityTransition 1s;
         animation: opacityTransition 1s;
         @include transition(1s);
+        color: $white;
 
         .captcha {
             margin: 0px auto;
@@ -11,8 +13,7 @@
     
         .send__message__button  {
             border: 1px solid $white;
-            background: transparent;
-            color: $white;
+            background: transparent;            
             font-size: 1em;
             padding: 15px;
             margin: 0px auto 35px;
@@ -26,6 +27,18 @@
                 opacity: .6;
                 border: 1px solid $white;
                 background: transparent;
+                color: $white;
+            }
+        }
+    }
+
+    #contact-data {
+        color: $white;
+
+        p {
+            margin-top: 15px;
+
+            a {
                 color: $white;
             }
         }

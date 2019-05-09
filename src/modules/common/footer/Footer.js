@@ -16,7 +16,11 @@ const Footer = () => {
         </NavLink>
         <div className="row">
           <div className="col-md-12 text-center">
-            +34666666666 · <a href="mailto:mail@mail.com">mail@mail.com</a>
+            <i className="fas fa-phone" />
+            +34666666666&nbsp;&nbsp;·&nbsp;&nbsp;
+            <a href="mailto:mail@mail.com">
+              <i className="far fa-envelope" /> mail@mail.com
+            </a>
           </div>
         </div>
         <nav id="footer-menu">
