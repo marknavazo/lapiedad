@@ -15,7 +15,9 @@ const Footer = () => {
           <h3>{parse(GENERALTEXT.TITLE)}</h3>
         </NavLink>
         <div className="row">
-          <div className="col-md-12 text-center">+34666666666 · mail@mail.com</div>
+          <div className="col-md-12 text-center">
+            +34666666666 · <a href="mailto:mail@mail.com">mail@mail.com</a>
+          </div>
         </div>
         <nav id="footer-menu">
           <ul>
