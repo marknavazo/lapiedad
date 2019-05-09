@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import parse from 'html-react-parser';
 import ROUTES from '../../../constants/routes';
+import Menuoptions from '../menuoptions/Menuoptions';
 
 // TEXTS
 import GENERALTEXT from '../../../texts/generaltext';
-import MENU from '../../../texts/menu';
 
 const Footer = () => {
   return (
@@ -20,28 +20,7 @@ const Footer = () => {
           </div>
         </div>
         <nav id="footer-menu">
-          <ul>
-            <li>
-              <NavLink exact to={ROUTES.HOME} activeClassName="selected">
-                {MENU.HOME}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to={ROUTES.GALLERY} activeClassName="selected">
-                {MENU.GALLERY}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to={ROUTES.CONTACT} activeClassName="selected">
-                {MENU.CONTACT}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to={ROUTES.LOCALIZATION} activeClassName="selected">
-                {MENU.LOCALIZATION}
-              </NavLink>
-            </li>
-          </ul>
+          <Menuoptions />
         </nav>
       </div>
     </footer>

@@ -21,7 +21,8 @@ export default {
       );
       return data;
     } catch (error) {
-      throw error;
+      // throw error;
+      return error;
     }
   },
   onValidate: async ({ cancelToken, accessToken }) => {
@@ -36,7 +37,8 @@ export default {
       });
       return data;
     } catch (error) {
-      throw error;
+      // throw error;
+      return error;
     }
   },
   onRefresh: async ({ cancelToken, ...payload }) => {
@@ -51,7 +53,8 @@ export default {
       );
       return data;
     } catch (error) {
-      throw error;
+      // throw error;
+      return error;
     }
   },
 };
