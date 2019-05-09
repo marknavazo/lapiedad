@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { GENERAL, HOME } from '../../../texts';
+import GENERALTEXT from '../../../texts/generaltext';
+import HOME from '../../../texts/home';
 
 // Components
 import Footer from '../../common/footer/Footer';
 
 class HomePage extends Component {
   componentDidMount() {
-    document.title = `${GENERAL.PAGE_TITLE} - ${GENERAL.HOME}`;
+    document.title = `${GENERALTEXT.PAGE_TITLE} - ${GENERALTEXT.HOME}`;
   }
 
   render() {
     return (
       <div className="container-fluid" id="home">
-        <div className="container main-container pt80">
+        <div className="container main-container pt90">
           <div className="text__container">
             <h2>{HOME.TITLE}</h2>
             <p>{HOME.TEXT}</p>

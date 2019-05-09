@@ -1,4 +1,4 @@
-export const CONTACT = {
+const CONTACT = {
   TITLE: 'Contacto',
   IS_REQUIRED: 'es obligatorio',
   PHONE_NUMBER: 'Teléfono',
@@ -9,3 +9,5 @@ export const CONTACT = {
   MESSAGE: 'Mensaje',
   SEND: 'Enviar',
 };
+
+export default CONTACT;

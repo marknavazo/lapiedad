@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { ROUTES } from './constants';
+import ROUTES from './constants/routes';
 // Helpers
 import { APP_TOKEN } from './api/Constants';
 // Utils
@@ -14,7 +14,7 @@ const LoginPage = lazy(() => import('./modules/public/login/LoginPage'));
 const GalleryPage = lazy(() => import('./modules/public/gallery/GalleryPage'));
 const ContactPage = lazy(() => import('./modules/public/contact/ContactPage'));
 const LocalizationPage = lazy(() => import('./modules/public/localization/LocalizationPage'));
-const HomePage = lazy(() => import('./modules/public/Home/HomePage'));
+const HomePage = lazy(() => import('./modules/public/home/HomePage'));
 const NoMatchPage = lazy(() => import('./modules/not-found/NoMatchPage'));
 
 const Routes = () => {

@@ -30,6 +30,7 @@ $lg: 1200px;
 // PADDINGS
 
 .pt100 {padding-top: 100px;}
+.pt90 {padding-top: 90px;}
 .pt80 {padding-top: 80px;}
 .pt50 {padding-top: 50px;}
 
@@ -55,7 +56,7 @@ $white:         #ffffff;
 }
 
 .main-container {
-  min-height: calc(100vh - 111px);
+  min-height: calc(100vh - 132px);
 }
 
 h2 {

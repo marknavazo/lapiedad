@@ -1,3 +1,7 @@
 #map {
+  margin-top: 25px;
   width: 500px;
+  -webkit-animation: opacityTransition 1s;
+  animation: opacityTransition 1s;
+  @include transition(1s);
 }

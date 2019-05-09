@@ -1,3 +1,5 @@
-export const LOCALIZATION = {
+const LOCALIZATION = {
   TITLE: 'Localización',
 };
+
+export default LOCALIZATION;
