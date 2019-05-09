@@ -14,7 +14,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "prettier": "prettier --write src/**/*.js"
+    "prettier": "prettier --write src/**/*.js",
+    "sonarqube": "sonar-scanner"
   },
   "husky": {
     "hooks": {
@@ -49,6 +50,7 @@
     "react-transition-group": "^2.4.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
+    "sonar-scanner": "^3.1.0",
     "styled-components": "^3.3.3",
     "use-abortable-fetch": "^2.6.2"
   },
