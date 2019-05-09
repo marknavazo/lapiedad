@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { elastic as Menu } from 'react-burger-menu';
+import parse from 'html-react-parser';
 import ROUTES from '../../../constants/routes';
 
 // TEXTS
@@ -26,7 +27,7 @@ const Navigation = () => {
       </Menu>
       <div className="container">
         <NavLink exact to={ROUTES.HOME}>
-          <h1 dangerouslySetInnerHTML={{ __html: GENERALTEXT.TITLE }} />
+          <h1>{parse(GENERALTEXT.TITLE)}</h1>
         </NavLink>
         <nav id="top-menu">
           <ul>

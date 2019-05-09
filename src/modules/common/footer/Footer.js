@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import parse from 'html-react-parser';
 import ROUTES from '../../../constants/routes';
 
 // TEXTS
@@ -11,7 +12,7 @@ const Footer = () => {
     <footer>
       <div className="container text-center">
         <NavLink exact to={ROUTES.HOME}>
-          <h3 dangerouslySetInnerHTML={{ __html: GENERALTEXT.TITLE }} />
+          <h3>{parse(GENERALTEXT.TITLE)}</h3>
         </NavLink>
         <div className="row">
           <div className="col-md-12 text-center">+34666666666 · mail@mail.com</div>
