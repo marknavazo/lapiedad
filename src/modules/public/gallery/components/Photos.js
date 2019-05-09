@@ -1,5 +1,6 @@
 import React from 'react';
-import ImageGallery from 'react-image-gallery';
+// import ImageGallery from 'react-image-gallery';
+import Gallery from 'react-grid-gallery';
 import { buildUrl } from 'react-instafeed';
 import useAbortableFetch from 'use-abortable-fetch';
 import { GridLoader } from 'react-spinners';
@@ -33,25 +34,47 @@ const Photos = () => {
   // if (!json) return null
   const dataImages = data.data;
   // const { meta, pagination } = data;
+  // console.log('meta');
+  // console.log(meta);
+  // console.log('pagination');
+  // console.log(pagination);
 
   const arrImages = [];
 
   if (dataImages) {
+    let arrTags;
     dataImages.map(({ caption, id, images, tags }, index) => {
+      let user;
+      if (caption && caption.from) {
+        user = caption.from.username;
+      } else {
+        user = '';
+      }
+      arrTags = [];
+      tags.map(t => {
+        return arrTags.push({
+          value: t,
+          title: t,
+        });
+      });
       return arrImages.push({
-        original: images[options.resolution].url,
+        src: images[options.resolution].url,
         thumbnail: images.thumbnail.url,
         imagecaption: caption,
         imageid: id,
         imagetags: tags,
         imageindex: index,
+        thumbnailWidth: images.thumbnail.width,
+        thumbnailHeight: images.thumbnail.height,
+        tags: arrTags,
+        caption: user,
       });
     });
   }
 
   return (
     <div id="gallery__container">
-      <ImageGallery items={arrImages} />
+      <Gallery images={arrImages} showLightboxThumbnails />
     </div>
   );
 };

@@ -1,5 +1,19 @@
-#gallery__container {
-    max-width: 400px;
-    max-height: 50vh;
-    margin: 0px auto;
+#gallery {
+    text-align: center;
+
+    .main-container {
+        margin: 0px auto;
+        display: inline-block;
+
+        h2 {
+            text-align: left;
+        }
+
+        #gallery__container {
+            width: 100%;
+            float: left;
+            // display: inline-block;
+            margin: 35px auto 0;
+        }
+    }
 }
